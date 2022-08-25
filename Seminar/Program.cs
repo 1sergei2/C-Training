@@ -160,3 +160,76 @@
 //     Console.WriteLine("Надо было вводить цифры");
 //     }
 
+
+// Задача 21: Напишите программу, которая принимает на вход координаты 
+// двух точек и находит расстояние между ними в 2D пространстве.
+// A (3,6); B (2,1) -> 5,09 
+// A (7,-5); B (1,-1) -> 7,21
+
+// double Res()
+// {
+//     Console.WriteLine("Введите координаты точки A (x;y): ");
+//     int xa = Convert.ToInt32(Console.ReadLine());
+//     int ya = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координаты точки B (x;y):");
+//     int xb = Convert.ToInt32(Console.ReadLine());
+//     int yb = Convert.ToInt32(Console.ReadLine());
+//     int x =xa-xb;
+//     int y = ya-yb;
+//     double S = Math.Sqrt((Math.Pow(x,2)+Math.Pow(y,2)));
+//     return S;
+// }
+// try
+// {
+//     Console.WriteLine(Res());
+// }
+// catch
+// {
+//     Console.WriteLine("Введите цифры");
+// }
+
+
+// Задача 22: Напишите программу, которая принимает на вход 
+// число (N) и выдаёт таблицу квадратов чисел от 1 до N.
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
+
+// Console.WriteLine("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int index = 0;
+// string res = string.Empty;
+// for (index = n + 1; index++)
+// {
+//     res = Convert.ToString(index * index);
+//     index++;
+// }
+// Console.Write(res);
+
+void SquareTableN()
+{
+    Console.Write("Введите число ");
+    int N = Convert.ToInt32(Console.ReadLine());
+    int[] answer = new int[N];
+    if (N > 0)
+    {
+        for (int i = 1; i < (N + 1); i++)
+        {
+            answer[i - 1] = (i * i);
+        }
+    }
+    else
+    {
+        Console.Write("Надо было вводить положительные числа");
+    }
+    var str = string.Join(" ", answer);
+    Console.WriteLine(str);
+}
+
+try
+{
+    SquareTableN();
+}
+catch
+{
+    Console.Write("Надо было вводить числа");
+}
