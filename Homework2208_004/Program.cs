@@ -1,0 +1,10 @@
+﻿Console.WriteLine("Введите число ");
+int x = Convert.ToInt32(Console.ReadLine());
+string z1 = " программистов";
+string z2 = " программист";
+string z3 = " программиста";
+if (x == 0) Console.WriteLine(x + z1);
+else if ((x % 100 >= 10) && (x % 100 <= 20)) Console.WriteLine(x + z1);
+else if ((x % 10 == 1) || (x == 1)) Console.WriteLine(x + z2);
+else if ((x % 10 >= 2) && (x % 10 <= 4)) Console.WriteLine(x + z3);
+else Console.WriteLine(x + z1);
