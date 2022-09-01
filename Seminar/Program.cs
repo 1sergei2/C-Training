@@ -304,3 +304,202 @@
 //    array[i] = rand.Next(0,2);
 //    Console.Write(array[i]);
 // }
+
+
+
+// Задача 31: Задайте массив из 12 элементов,
+// заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20
+
+// Console.Clear();
+
+// int [] array = GetArray(12,-9,9);
+
+// Console.WriteLine(String.Join(" ", array));
+
+// int sumPositive = 0;
+// int sumNegative = 0;
+
+// foreach(int element in array){
+//      sumPositive += element > 0 ? element : 0;
+//      sumNegative += element < 0 ? element : 0; 
+// }
+
+// Console.WriteLine($"sum posititve: {sumPositive} sum Negative {sumNegative}");
+
+// int[] GetArray(int size, int min, int max){
+//     int[] result = new int[size];
+//     for(int i = 0; i < size; i++){
+//         result[i] = new Random().Next(min, max + 1);
+//     }
+// return result;
+// }
+
+
+// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+// Console.Clear(); 
+// Console.WriteLine("Укажите длину массива: "); 
+// int size = int.Parse(Console.ReadLine()); 
+// int [] rand = new int[size]; 
+// int [] rand2 = new int[size]; 
+// for (int i = 0; i < rand.Length; i++){ 
+//     rand[i] = new Random().Next(-99, 100); 
+//     Console.Write(rand[i]+" "); 
+// } 
+// Console.WriteLine(); 
+// for (int i = 0; i < rand.Length; i++){ 
+//     rand2[i] = rand[i] * -1; 
+//     Console.Write(rand2[i]+" "); 
+// } 
+// Console.WriteLine(); 
+
+
+// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// -3; массив [6, 7, 19, 345, 3] -> да
+
+// Console.Clear(); 
+// Console.WriteLine("Укажите длину массива: "); 
+// int size = int.Parse(Console.ReadLine()); 
+// Console.WriteLine("Введите искомое число: "); 
+// int num = int.Parse(Console.ReadLine()); 
+// int [] rand = new int[size]; 
+// bool A = false; 
+// for (int i = 0; i < rand.Length; i++){ 
+//     rand[i] = new Random().Next(0, 11); 
+//     Console.Write(rand[i]+" "); 
+//     if (rand[i] == num) 
+//         A = true; 
+// } 
+// Console.WriteLine(); 
+// if (A == true) 
+//     Console.WriteLine("Да"); 
+// else 
+//     Console.WriteLine("Нет");
+
+// .............................................................................................................................................
+// Console.Clear();
+
+// Console.WriteLine("Введите размерность массива: ");
+// int size = int.Parse(Console.ReadLine());
+
+// int [] array = GetArray(size,-9,9);
+
+// Console.WriteLine(String.Join(" ", array));
+
+// Console.WriteLine("Введите значение");
+// int findNumber = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(array.FirstOrDefault(p=>p == findNumber) != 0 ? "Да" : "Нет");
+
+
+// int [] GetArray(int size, int min, int max){
+//     int[] result = new int[size];
+
+//     for(int i = 0; i < size; i++){
+//         result[i] = new Random().Next(min, max + 1);
+        
+//     }
+// return result;
+// }
+
+
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайтедля 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+// Console.Clear(); 
+// int [] array = GetArray(123,-99,199); 
+// int j = 0; 
+// int [] GetArray(int size, int min, int max){ 
+//     int[] result = new int[size]; 
+ 
+//     for(int i = 0; i < size; i++){ 
+//         result[i] = new Random().Next(min, max + 1); 
+//     } 
+// return result; 
+// } 
+// int FindNumber(int [] array){ 
+//     for (int i = 0; i < array.Length; i++){ 
+//         if (array[i] >= 10 && array[i] <= 99) 
+//             j++; 
+//     } 
+// return j; 
+// } 
+// Console.WriteLine (String.Join(" ", array)); 
+// Console.WriteLine (FindNumber(array));
+
+
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+// Console.Clear();
+
+// int [] array = new int[5];
+
+// for (int i = 0; i < 5; i++) {
+//     array[i] = new Random().Next(0, 10);
+// }
+
+// Console.WriteLine(String.Join(" ", array));
+
+// int z = array.Length - 1;
+// for (int i = 0; i < z; i++)
+// {
+//     int pr = array[i] * array[z];
+//     z--;
+//     Console.Write(pr + " ");
+// }
+
+// if (array.Length % 2 != 0) {Console.Write (array[array.Length/2]); 
+// }
+// ..........................................................................................................................................................
+// int[] GetArray(int size, int min, int max)
+// {
+//     int[] result = new int[size];
+
+//     for (int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(min, max + 1);
+
+//     }
+//     return result;
+// }
+// int ReadNumber()
+// {
+//     int number = 0;
+//     while (true)
+//     {
+//         Console.WriteLine("Введите размерность");
+//         if (!int.TryParse(Console.ReadLine(), out number))
+//         {
+//             Console.WriteLine("Некорректный ввод");
+//         }
+//         else break;
+//     }
+//     return number;
+// }
+
+// Console.Clear();
+
+// int size = ReadNumber();
+// int[] array = GetArray(size, 0, 10);
+// int[] newArray = new int[size % 2 == 0 ? (size / 2) : (size / 2 + 1)];
+// for (int i = 0; i < newArray.Length; i++)
+// {
+//     newArray[i] = array[i] * array[array.Length - 1 - i];
+// }
+// if (newArray.Length % 2 != 0)
+// {
+//     newArray[newArray.Length - 1] = array[array.Length / 2];
+// }
+// Console.WriteLine(String.Join("*", array));
+
+// Console.WriteLine(String.Join("*", newArray));

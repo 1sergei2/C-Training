@@ -43,7 +43,7 @@ int n = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 int count = 1;
 while (count <= n)
 {
-    Console.Write($"{Math.Pow(count, 2)} ");
+    Console.Write($"{Math.Pow(count, 3)} ");
     count++;   
 }
 Console.WriteLine();
