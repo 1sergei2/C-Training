@@ -508,3 +508,156 @@
 // Console.WriteLine(String.Join("*", array));
 
 // Console.WriteLine(String.Join("*", newArray));
+
+
+
+// Семинар от 05.09.2022 ............................................................................
+
+// Задача 39: Напишите программу, которая
+// перевернёт одномерный массив (последний элемент
+// будет на первом месте, а первый - на последнем и
+// т.д.)
+// [1 2 3 4 5] -> [5 4 3 2 1]
+// [6 7 3 6] -> [6 3 7 6]
+
+// Console.Clear();
+
+// Console.WriteLine("Введите размерность массива: ");
+// int size = int.Parse(Console.ReadLine());
+
+// int [] array = FillArray(size, 1, 10);
+// Console.WriteLine("Входной массив: ");
+// Console.WriteLine(String.Join(" ", array));
+
+// Console.WriteLine("Полученный массив: ");
+// Console.WriteLine(String.Join(" ", array.Reverse()));
+
+// int [] FillArray(int size, int min, int max)
+// {
+//     int [] result = new int[size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(min, max + 1);
+//     }
+//     return result;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Задача 40: Напишите программу, которая принимает на
+// вход три числа и проверяет, может ли существовать
+// треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника
+// меньше суммы двух других сторон.
+
+// Console.Clear();
+// int A, B, C;
+// Console.Write("Введите длины сторон треугольника: ");
+// while (!int.TryParse(Console.ReadLine(), out A) || A < 0) 
+// {
+//     Console.Write("Ошибка! Введите положительное число: ");
+// }
+// Console.Write("Введите длины сторон треугольника: ");
+// while (!int.TryParse(Console.ReadLine(), out B) || B < 0) 
+// {
+//     Console.Write("Ошибка! Введите положительное число: ");
+// }
+// Console.Write("Введите длины сторон треугольника: ");
+// while (!int.TryParse(Console.ReadLine(), out C) || C < 0) 
+// {
+//     Console.Write("Ошибка! Введите положительное число: ");
+// }
+// if (A < B + C & B < A + C & C < A + B) 
+//     Console.Write("Может!");
+// else 
+//     Console.Write("Не может!");
+// Console.WriteLine( );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Задача 42: Напишите программу, которая будет
+// преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3 -> 11
+// 2 -> 10
+
+// Console.Clear();
+// Console.WriteLine("Введите число: ");
+// int value = int.Parse(Console.ReadLine());
+// string BinaryCode = Convert.ToString(value, 2);
+// Console.WriteLine("Число в двоичной системе: ");
+// Console.WriteLine(BinaryCode);
+
+//..................................................................................................
+
+// Console.Clear();
+// Console.WriteLine("Введите число: ");
+// int value = int.Parse(Console.ReadLine());
+
+// string i = " ";
+
+// while (value > 0)
+// {
+//     if (value % 2 != 0){
+//         i += "1";
+//     }
+//     else{
+//         i += "0";
+//     }
+//     value = value / 2;
+// }
+// Console.WriteLine($"в двоичной системе:");
+// Console.WriteLine(String.Join(" ", i.Reverse()));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Задача 44: Не используя рекурсию, выведите первые
+// N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и
+// 1
+// Если N = 5 -> 0 1 1 2 3
+// Если N = 3 -> 0 1 1
+// Если N = 7 -> 0 1 1 2 3 5 8
+
+// Console.Clear();
+// Console.WriteLine("Введите число: ");
+// int N = int.Parse(Console.ReadLine());
+// int i = 0;
+// int Fib1 = 0;
+// int Fib2 = 1;
+// while(i<N)
+// {
+//     Console.Write(Fib1 + " ");
+//     Fib2 = Fib1+Fib2;
+//     Fib1 = Fib2-Fib1;
+//     i++;
+// }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Задача 45: Напишите программу, которая будет
+// создавать копию заданного массива с помощью
+// поэлементного копирования.
+
+// Console.Clear();
+
+// Console.WriteLine("Введите размерность массива: ");
+// int size = int.Parse(Console.ReadLine());
+
+// int [] array1 = FillArray(size, 1, 10);
+
+// int [] FillArray(int size, int min, int max){
+//     int [] result = new int[size];
+//     for(int i = 0; i < size;i++){
+//         result[i] = new Random().Next(min, max + 1);
+//     }
+//     return result;
+// }
+// Console.WriteLine(String.Join(" ", array1));
+// int [] array2 = new int[size];
+// for(int i = 0; i <size; i++)
+// {
+//     array2[i] = array1[i];
+// }
+// Console.WriteLine(String.Join(" ", array2));
+
