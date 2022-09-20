@@ -2,7 +2,6 @@
 // M = 1; N = 5 -> "2, 4"
 // M = 4; N = 8 -> "4, 6, 8
 
-/*
 Console.Clear();
 Console.Write("Введите число M: ");
 int m = Convert.ToInt32(Console.ReadLine());
@@ -12,20 +11,18 @@ NaturalEvenNumber(m, n);
 
 int NaturalEvenNumber(int m, int n)
 {
+    if (m % 2 == 0)
+    {
+        Console.Write($"{m} ");  
+    }
     if (m == n)
     {
-         Console.Write($"{n} ");
-         return n;
+        return n;
     }
-    else if (m % 2 == 0)
-    {
-        Console.Write($"{m} ");
-        m++;
-    }
-    else m++;
+    m++;
     return NaturalEvenNumber(m, n);
 }
-*/
+
 
 /*
 Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
